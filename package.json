@@ -1,8 +1,12 @@
 {
   "name": "@ewmiller/lotr-sdk",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "An SDK for the One API to Rule Them All",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "test": "jest",
     "start": "tsc && node dist/index.js",

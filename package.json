@@ -1,6 +1,6 @@
 {
   "name": "@ewmiller/lotr-sdk",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An SDK for the One API to Rule Them All",
   "main": "src/index.ts",
   "scripts": {

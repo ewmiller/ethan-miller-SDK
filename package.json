@@ -1,0 +1,23 @@
+{
+  "name": "lotr-sdk",
+  "version": "0.0.1",
+  "description": "An SDK for the One API to Rule Them All",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ewmiller/lotr-sdk.git"
+  },
+  "author": "Ethan Miller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ewmiller/lotr-sdk/issues"
+  },
+  "homepage": "https://github.com/ewmiller/lotr-sdk#readme",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}

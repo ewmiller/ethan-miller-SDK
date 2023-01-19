@@ -11,7 +11,8 @@ export class LOTR {
   public movies: LOTRMovies;
   public quotes: LOTRQuotes;
 
-  constructor({ apiToken, requestTimeout }: InstanceConfigOptions) {
+  constructor(options: InstanceConfigOptions) {
+    const { apiToken, requestTimeout } = options;
     const api = axios.create({
       baseURL: "https://the-one-api.dev/v2/movie",
       timeout: requestTimeout || 5000,

@@ -1,6 +1,6 @@
 {
   "name": "@ewmiller/lotr-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An SDK for the One API to Rule Them All",
   "main": "dist/index.js",
   "files": [

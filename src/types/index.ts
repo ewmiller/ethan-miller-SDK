@@ -1,3 +1,5 @@
+import { AxiosInstance } from "axios";
+
 export interface MoviesResponse {
   docs: Movie[];
 }
@@ -29,4 +31,11 @@ export interface ConfigOptions {
   limit?: number;
   page?: number;
   offset?: number;
+}
+
+export class APIRoute {
+  protected api: AxiosInstance;
+  constructor(api: AxiosInstance) {
+    this.api = api;
+  }
 }

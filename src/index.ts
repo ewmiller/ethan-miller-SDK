@@ -1,8 +1,7 @@
-import { quotes } from "./methods";
 import axios, { AxiosInstance } from "axios";
+import { LOTRMovies } from "./entities/movies";
+import { LOTRQuotes } from "./entities/quotes";
 import { ConfigOptions, MoviesResponse, QuotesResponse } from "./types";
-
-// export { lotr };
 
 export interface InstanceConfigOptions {
   apiToken?: string;
@@ -20,48 +19,5 @@ export class LOTR {
     });
     this.movies = new LOTRMovies(api);
     this.quotes = new LOTRQuotes(api);
-  }
-}
-
-export class APIRoute {
-  protected api: AxiosInstance;
-  constructor(api: AxiosInstance) {
-    this.api = api;
-  }
-}
-
-export class LOTRMovies extends APIRoute {
-  constructor(api: AxiosInstance){
-    super(api);
-  }
-
-  async getAll(config: ConfigOptions = {}) {
-    const result = await this.api.get("/", {
-      params: { ...config },
-    });
-    return result.data as MoviesResponse;
-  }
-  
-  async getOne(id: string, config: ConfigOptions = {}) {
-    const result = await this.api.get(`/${id}`, {
-      params: { ...config },
-    });
-    return result.data as MoviesResponse;
-  }
-}
-
-export class LOTRQuotes extends APIRoute {
-  constructor(api: AxiosInstance){
-    super(api);
-  }
-
-  async getQuotesFromMovie(id: string, config: ConfigOptions = {}) {
-    const requestString = `/${id}/quote`;
-    const result = await this.api.get(`/${id}/quote`, {
-      params: {
-        ...config,
-      },
-    });
-    return result.data as QuotesResponse;
   }
 }

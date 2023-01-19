@@ -1,6 +1,6 @@
 {
   "name": "@ewmiller/lotr-sdk",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "An SDK for the One API to Rule Them All",
   "main": "dist/src/index.js",
   "files": [
@@ -10,8 +10,8 @@
   "scripts": {
     "test": "jest",
     "start": "tsc && node dist/index.js",
-    "publish-patch": "rm -rf dist/* && tsc && npm version patch --force && npm publish --access public",
-    "publish-major": "rm -rf dist/* && tsc && npm version major --force && npm publish --access public"
+    "publish-patch": "rm -rf dist/* && tsc --declaration && npm version patch --force && npm publish --access public",
+    "publish-major": "rm -rf dist/* && tsc --declaration && npm version major --force && npm publish --access public"
   },
   "repository": {
     "type": "git",

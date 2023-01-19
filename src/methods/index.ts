@@ -1,6 +1,6 @@
 import movies from './movies';
 import quotes from './quotes';
 
-export default {
+export {
   movies, quotes
 }

@@ -1,11 +1,14 @@
-import { lotr } from './index';
+import { LOTR } from './index';
+import * as dotenv from "dotenv";
 
-describe('End to end tests with live data', () => {
-  it('Can fetch all movies', async () => {
+dotenv.config();
+
+describe("End to end tests with live data", () => {
+  const lotr = new LOTR({apiToken: process.env.LOTR_API_TOKEN});
+  it("Can fetch all movies", async () => {
     const result = await lotr.movies.getAll();
     expect(result?.docs.length).toBeGreaterThan(0);
   });
-
   it('Can fetch one movie by its ID', async () => {
     const result = await lotr.movies.getOne("5cd95395de30eff6ebccde56");
     expect(result?.docs.length).toBe(1);

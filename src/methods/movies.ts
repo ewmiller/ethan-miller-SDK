@@ -1,3 +1,4 @@
+import { LOTR } from "..";
 import api from "../api";
 import { ConfigOptions, MoviesResponse } from "../types";
 
